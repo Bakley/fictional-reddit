@@ -13,13 +13,13 @@ class Comment:
         self.time_stamp = datetime.datetime.now()
     
  
-    # def save_comment(self):
+    def save_comment(self):
 
-    #     '''
-    #     save_comment method saves comment objects into comment_list
-    #     '''
+        '''
+        save_comment method saves comment objects into comment_list
+        '''
 
-    #     Comment.comment_list.append(self)
+        Comment.comment_list.append(self)
 
 
     

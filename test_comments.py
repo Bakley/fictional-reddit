@@ -34,10 +34,20 @@ class TestContact(unittest.TestCase):
             Comment.comment_list = []
 
     def test_save_multiple_comment(self):
+        """Test for saving multiple comments"""
         self.new_comment.save_comment()
         test_comment = Comment("Brayan","Good,and where do you get the item?") # new comment
         test_comment.save_comment()
         self.assertEqual(len(Comment.comment_list),2)
+
+    def test_delete_comment(self):
+        """Test for deleting a comment"""
+        self.new_comment.save_comment()
+        test_comment = Comment("Koin","Awesome") # new comment
+        test_comment.save_comment()
+
+        self.new_comment.delete_comment()# Deleting a comment object
+        self.assertEqual(len(Comment.comment_list),1)
 
 
 if __name__ == '__main__':

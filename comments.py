@@ -21,6 +21,20 @@ class Comment:
 
         Comment.comment_list.append(self)
 
-
     
-  
+    def delete_comment(self):
+
+        '''
+        delete_comment method deletes a saved comment from the comment_list
+        '''
+
+        Comment.comment_list.remove(self)
+
+    @classmethod
+    def display_comments(cls):
+        '''
+        method that returns the contact list
+        '''
+        print(cls.comment_list)
+        return cls.comment_list
+

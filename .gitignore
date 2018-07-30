@@ -103,6 +103,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+
+virtual/
+
 # Created by https://www.gitignore.io/api/python,virtualenv,pycharm+all,visualstudio,visualstudiocode
 
 ### PyCharm+all ###

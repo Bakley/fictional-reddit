@@ -15,7 +15,7 @@ class TestContact(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_comment = Comment("Antony","Impresive blog",datetime.datetime.now()) 
+        self.new_comment = Comment("Antony","Impresive blog") 
     
     def test_init(self):
         """Method to test the object initialises correctly"""
@@ -26,6 +26,18 @@ class TestContact(unittest.TestCase):
         """test to save a single comment"""
         self.new_comment.save_comment() # saving the new comment
         self.assertEqual(len(Comment.comment_list),1)
+    
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Comment.comment_list = []
+
+    def test_save_multiple_comment(self):
+        self.new_comment.save_comment()
+        test_comment = Comment("Brayan","Good,and where do you get the item?") # new comment
+        test_comment.save_comment()
+        self.assertEqual(len(Comment.comment_list),2)
 
 
 if __name__ == '__main__':

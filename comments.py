@@ -38,3 +38,7 @@ class Comment:
         print(cls.comment_list)
         return cls.comment_list
 
+class Reply(Comment):
+    pass
+
+

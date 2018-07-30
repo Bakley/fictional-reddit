@@ -49,6 +49,12 @@ class TestContact(unittest.TestCase):
         self.new_comment.delete_comment()# Deleting a comment object
         self.assertEqual(len(Comment.comment_list),1)
 
+    def test_display_all_comments(self):
+        '''
+        method that returns a list of all comments saved
+        '''
+        self.assertEqual(Comment.display_comments(),Comment.comment_list)
+
 
 if __name__ == '__main__':
     unittest.main()

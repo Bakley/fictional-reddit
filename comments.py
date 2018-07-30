@@ -20,8 +20,8 @@ class Comment:
         '''
 
         Comment.comment_list.append(self)
-        
 
+    
     def delete_comment(self):
 
         '''
@@ -30,5 +30,11 @@ class Comment:
 
         Comment.comment_list.remove(self)
 
-    
-  
+    @classmethod
+    def display_comments(cls):
+        '''
+        method that returns the contact list
+        '''
+        print(cls.comment_list)
+        return cls.comment_list
+

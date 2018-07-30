@@ -4,11 +4,7 @@ import sys
 class Menu:
     def __init__(self):
         pass
-        # self.comments = Comments()
-        # self.user = User()
-        # self.choices = {
-        #      "1": self.user
-        #     }
+
 
     def display_users(self):
         """This method displays the type of users we have"""
